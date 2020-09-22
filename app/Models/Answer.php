@@ -30,4 +30,16 @@ class Answer extends Model
        });
 
     }
+
+    public function getBodyHtmlAttribute()
+    {
+        return $this->body;
+    }
+
+    public function getCreatedDateAttribute()
+    {
+        return $this->created_at->diffForHumans();
+    }
+
+
 }
